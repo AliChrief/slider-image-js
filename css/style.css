@@ -11,7 +11,6 @@
     width: 800px;
     height: 250px;
     position: relative;
-    border:1px solid black;
   }
   .slider-container img {
     position: absolute;
@@ -40,8 +39,7 @@
     margin: auto;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
-  }
+    overflow: hidden;  }
  .prev,
   .next {
     background-color: #009688;
@@ -52,17 +50,41 @@
     border-radius: 4px;
     padding: 5px;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 20%;
   }
-  .slider-controls .prev {
- 
+  .indicators{
+    width:60%;
+    
   }
-  .slider-controls .next {
-   
+  .indicators ul{
+    display: flex;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    list-style-type:none;
+    justify-content: space-evenly;
   }
+
   .slider-controls .prev.disabled,
   .slider-controls .next.disabled {
-    background-color: rgba(0, 150, 136, 0.5);
+    background-color:rgba(0, 150, 136, 0.5);
     cursor: no-drop;
   }
- 
+  .slider-controls .indicators ul li {
+    background-color: #F6F6F6;
+    color: #333;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    padding-top:9px;
+  }
+  .slider-controls .indicators ul li.active {
+    background-color: #009688;
+    color: #FFF;
+  }
